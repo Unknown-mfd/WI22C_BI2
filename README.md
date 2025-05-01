@@ -19,6 +19,7 @@ WI22C_BI/
 ├── dashboard/
 │   └── provisioning/      # Grafana-Provisioning (Datasources, Dashboards)
 ├── cronadmin/             # Python-Skripte und UI für geplante Aufgaben
+├── docs/                  # Dokumentation für das Projekt
 └── README.md              # Dieses Dokument
 ```
 
