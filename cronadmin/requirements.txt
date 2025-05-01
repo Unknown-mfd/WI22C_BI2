@@ -1,0 +1,9 @@
+# filepath: c:\Users\affen\Desktop\Programmieren\WI22C_BI\cronadmin\requirements.txt
+flask
+requests
+beautifulsoup4
+pandas
+mysql-connector-python
+python-dotenv
+pytrends
+scikit-learn

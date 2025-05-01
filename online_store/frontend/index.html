@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Refurbished Laptop Shop</title>
+  <link rel="icon" type="png" href="../../logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="../../logo.png" alt="logo" class="logo"></a>
+    <nav>
+      <a href="#laptops">Laptops</a>
+      <a href="#cart">Warenkorb</a>
+    </nav>
+  </header>
+
+  <!-- Such- und Sortierbereich -->
+  <section id="search-sort">
+    <input type="text" id="search-input" placeholder="Suche nach Laptop...">
+    <label for="sort-select">Sortieren:</label>
+    <select id="sort-select">
+      <option value="">Sortieren nach</option>
+      <option value="price-asc">Preis: aufsteigend</option>
+      <option value="price-desc">Preis: absteigend</option>
+      <option value="name-asc">Name: A-Z</option>
+      <option value="name-desc">Name: Z-A</option>
+    </select>
+  </section>
+
+  <!-- Bereich für die Laptop-Liste -->
+  <section id="laptops">
+    <h2>Unsere Laptops</h2>
+    <div id="laptop-list" class="laptop-list">
+      <!-- Dynamisch befüllte Laptop-Einträge -->
+    </div>
+  </section>
+
+  <!-- Detailansicht (als Modal, wird per JavaScript eingeblendet) -->
+  <section id="laptop-detail" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeDetail()">&times;</span>
+      <h2 id="detail-title"></h2>
+      <p id="detail-manufacturer"></p>
+      <p id="detail-modell"></p>
+      <p id="detail-specifications"></p>
+      <p id="detail-price"></p> 
+      <button id="add-to-cart">In den Warenkorb</button>
+    </div>
+  </section>
+
+  <!-- Warenkorb -->
+  <section id="cart">
+    <h2>Warenkorb</h2>
+    <div id="cart-items">
+      <!-- Dynamisch befüllte Warenkorb-Einträge -->
+    </div>
+    <p id="total-price">Gesamtpreis: 0€</p>
+    <button id="purchase-button" onclick="purchaseOrder()">Kaufen</button>
+  </section>
+
+  <!-- Bestellbestätigung (als modales Fenster) -->
+  <section id="order-confirmation" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeConfirmation()">&times;</span>
+      <h2>Bestellbestätigung</h2>
+      <p id="order-info"></p>
+    </div>
+  </section>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

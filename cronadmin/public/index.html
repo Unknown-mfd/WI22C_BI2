@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReBoot CronAdmin - Pipelines</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="pipelines.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="../logo.png" alt="ReBoot Logo" class="logo">
+      <h1>ReBoot CronAdmin</h1>
+      <nav>
+        <a href="index.html" class="active">Pipelines</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="pipelines-section">
+      <h2>Pipelines Übersicht</h2>
+      <div class="cards-container">
+        <!-- Pipeline-Karten werden hier dynamisch geladen -->
+      </div>
+    </section>
+    <section class="live-output-section">
+      <h2>Live Output</h2>
+      <label for="liveOutput">Live Output:</label>
+      <textarea id="liveOutput" readonly placeholder="Live output will appear here"></textarea>
+    </section>
+  </main>
+</body>
+</html>

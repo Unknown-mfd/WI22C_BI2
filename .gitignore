@@ -1,0 +1,8 @@
+.vscode
+online_store/backend/node_modules
+postgres_data
+cronadmin/node_modules
+cronadmin/logs/cron.log
+online_store/backend/package-lock.json
+db/data/*
+cronadmin/package-lock.json

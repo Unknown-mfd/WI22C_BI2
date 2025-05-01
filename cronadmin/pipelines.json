@@ -1,0 +1,18 @@
+
+{
+    "google_trends": {
+      "schedule": "0 */1 * * *"
+    },
+    "amazon": {
+      "schedule": "0 */2 * * *"
+    },
+    "ebay": {
+      "schedule": "0 */1 * * *"
+    },
+    "news": {
+      "schedule": "0 */4 * * *"
+    },
+    "prognose_skript": {
+      "schedule": "0 */12 * * *"
+    }
+}

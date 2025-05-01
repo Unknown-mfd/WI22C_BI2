@@ -1,0 +1,229 @@
+/* Grundfarben und Schriftarten */
+:root {
+  --background-color: #fefefe;
+  --primary-color: #333;
+  /* Rötliches Farbschema */
+  --accent-color: #d32f2f;
+  --accent-color-dark: #b71c1c;
+  --font-family: 'Roboto', sans-serif;
+}
+
+/* Basisstil */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #f8f4f4 0%, #fefefe 100%);
+  font-family: var(--font-family);
+  color: var(--primary-color);
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--accent-color) 0%, var(--accent-color-dark) 100%);
+  color: #fff;
+  padding: 1rem;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+/* Navigation im Header */
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Überschriften */
+h1, h2, h3 {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+/* Main Container */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Pipelines Section */
+.pipelines-section {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pipelines-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Einzelne Pipeline-Karte */
+.pipeline-card {
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  flex: 1 1 calc(25% - 1rem);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s;
+}
+
+.pipeline-card:hover {
+  transform: translateY(-3px);
+}
+
+.pipeline-card h3 {
+  margin-bottom: 0.25rem;
+  color: var(--accent-color);
+}
+
+/* Labels und Inputs in der Karte */
+.pipeline-card label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.pipeline-card input[type="text"] {
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Aktionen in der Karte */
+.actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.actions button {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions button:hover {
+  background-color: var(--accent-color-dark);
+}
+
+/* Live Output Section */
+.live-output-section {
+  background-color: #1e1e1e; /* dunkler Hintergrund */
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.live-output-section h2 {
+  margin: 0 0 1rem;
+  color: #ffffff;
+  font-size: 1.25rem;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+/* Live Output Textarea */
+#liveOutput {
+  width: 100%;
+  height: 300px;
+  background-color: #2d2d2d;
+  color: #00ff00; /* "Terminal"-Grün */
+  border: none;
+  padding: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  border-radius: 4px;
+  resize: vertical;
+  overflow-y: auto;
+}
+
+
+#terminal-container {
+  width: 100%;
+  height: 300px;
+  background-color: #000;
+  border: 1px solid #444;
+}
+
+/* Grafana Section (unverändert) */
+.grafana-section {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.grafana-section iframe {
+  width: 100%;
+  height: 800px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 992px) {
+  .pipeline-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .pipeline-card {
+    flex: 1 1 100%;
+  }
+}

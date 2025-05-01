@@ -1,0 +1,15 @@
+# cronadmin/crontab
+# Cronjob für Google Trends
+0 */1 * * * python3 /app/scripts/google_trends.py >> /app/logs/cron.log 2>&1
+
+# Cronjob für Amazon
+0 */2 * * * python3 /app/scripts/amazon.py >> /app/logs/cron.log 2>&1
+
+# Cronjob für eBay
+0 */1 * * * python3 /app/scripts/ebay.py >> /app/logs/cron.log 2>&1
+
+# Cronjob für News
+0 */4 * * * python3 /app/scripts/news.py >> /app/logs/cron.log 2>&1
+
+# Cronjob für Prognose
+0 3 * * * python3 /app/scripts/prognose_skript.py >> /app/logs/cron.log 2>&1
